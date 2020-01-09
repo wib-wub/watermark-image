@@ -1,5 +1,5 @@
 {
-  "name": "watermark",
+  "name": "image-watermark-waveblur",
   "version": "0.0.1",
   "description": "Let's Image with watermark with jimp",
   "main": "app.js",
