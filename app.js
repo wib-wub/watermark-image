@@ -25,12 +25,13 @@ function getDimensions(H, W, h, w, ratio) {
  *
  * @param {string} image - base image base64 string
  * @param {string} waterMark - base64 string watermark image
- * @param {{ opacity : number, ratio : number}} options
+ * @param options
  * @param {number} options.ratio
  * @param {number} options.opacity
  * @returns {Promise<string>} - base64 string image with watermark
  */
 async function addWaterMark(image, waterMark, options) {
+	// eslint-disable-next-line no-useless-catch
 	try {
 		const base64 = Buffer.from(image, 'base64');
 		const waterMarkBase64 = Buffer.from(waterMark, 'base64');
@@ -41,17 +42,18 @@ async function addWaterMark(image, waterMark, options) {
 			inputEntity.getWidth(),
 			watermarkEntity.getHeight(),
 			watermarkEntity.getWidth(),
-			options.ratio);
+			options.ratio,
+		);
 		const positionX = (inputEntity.getWidth() - newWidth) / 2;
 		const positionY = (inputEntity.getHeight() - newHeight) / 2;
 
 		await watermarkEntity.resize(newWidth, newHeight);
 		await watermarkEntity.opacity(options.opacity);
 		await inputEntity.composite(watermarkEntity, positionX, positionY, Jimp.HORIZONTAL_ALIGN_CENTER | Jimp.VERTICAL_ALIGN_MIDDLE);
-		await inputEntity.quality(100).write(__dirname + '/test.png');
 		return await inputEntity.getBase64Async(Jimp.MIME_PNG);
 	} catch (e) {
 		throw e;
 	}
 }
+
 module.exports = addWaterMark;
