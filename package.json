@@ -1,6 +1,6 @@
 {
-  "name": "@wwwwvv/watermark-image",
-  "version": "0.0.2",
+  "name": "image-watermark-waveblur",
+  "version": "0.0.3",
   "description": "Let's Image with watermark with jimp",
   "main": "app.js",
   "repository": "https://github.com/wwwwvv/watermark-image",
@@ -9,7 +9,6 @@
   "scripts": {
     "test": "jest"
   },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "keywords": [
     "watermark",
     "jimp"
