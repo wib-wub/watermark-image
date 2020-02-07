@@ -1,6 +1,6 @@
 {
   "name": "image-watermark-waveblur",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Let's Image with watermark with jimp",
   "main": "app.js",
   "repository": "https://github.com/wwwwvv/watermark-image",
