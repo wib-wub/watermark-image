@@ -5,9 +5,6 @@ test('Core function should correctly', async () => {
 		fontSize: 8,
 		opacity: 0.5,
 		ratio: 1,
-		text: {
-			// message: `${new Date().getTime().toString()}`,
-		}
 	};
 	expect(await watermark(sample, watermarkSample, options)).toBeTruthy();
 });
