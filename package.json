@@ -16,7 +16,7 @@
   "author": "wwwwvvv",
   "devDependencies": {
     "eslint": "^7.18.0",
-    "eslint-plugin-jest": "^23.3.0",
+    "eslint-plugin-jest": "^24.1.9",
     "jest": "^24.9.0"
   },
   "dependencies": {
